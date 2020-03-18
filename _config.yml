@@ -7,7 +7,7 @@ title: 生活如此多娇～
 subtitle: ''
 description: ''
 keywords:
-author: 时间煮雨
+author: 生活如此多娇～
 language: zh-Hans
 timezone: ''
 
@@ -74,7 +74,7 @@ meta_generator: true
 ## Hexo uses Moment.js to parse and display date
 ## You can customize the date format as defined in
 ## http://momentjs.com/docs/#/displaying/format/
-date_format: YYYY-MM-DD
+date_format: YYYY-MM-DD HH:mm:ss
 time_format: HH:mm:ss
 ## Use post's date for updated date unless set in front-matter
 use_date_for_updated: false
@@ -99,5 +99,5 @@ theme: next
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-    repo: git@e.coding.net:larva/life.git
-    branch: release
+  repo: git@e.coding.net:larva/life.git
+  branch: release

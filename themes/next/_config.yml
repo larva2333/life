@@ -6,7 +6,7 @@
 favicon: /favicon.ico
 
 # Set default keywords (Use a comma to separate)
-keywords: "code, novel, music"
+# keywords: "code, novel, music"
 
 # Set rss to false to disable feed link.
 # Leave rss as empty to use site's feed link.
@@ -154,7 +154,7 @@ social_icons:
 # Sidebar Avatar
 # in theme directory(source/images): /images/avatar.jpg
 # in site  directory(source/uploads): /uploads/avatar.jpg
-avatar: /images/touxiang.jpeg
+# avatar: /images/touxiang.jpeg
 
 
 # Table Of Contents in the Sidebar

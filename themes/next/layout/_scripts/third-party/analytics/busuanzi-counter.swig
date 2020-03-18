@@ -12,7 +12,7 @@
     <span class="site-pv">{{ theme.busuanzi_count.site_pv_header }}<span class="busuanzi-value" id="busuanzi_value_site_pv"></span>{{ theme.busuanzi_count.site_pv_footer }}</span>
   {% endif %}
 
-  <span class="post-count">共写了{{ totalcount(site) }}字</span>
+  <span><i class="fa fa-pencil"></i> 总共写了<span class="post-count">{{ totalcount(site) }}</span> 字</span>
   
 </div>
 
