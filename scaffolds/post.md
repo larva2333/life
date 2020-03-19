@@ -1,8 +1,8 @@
 ---
 title: {{ title }}
 date: {{ date }}
-categories: 
+categories: 随笔
 tags: 
-location: 
+location: 横店百顺街
 ---
 <!-- more -->

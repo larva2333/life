@@ -23,11 +23,13 @@
     height: 2px;
     bottom: 0;
     left: 0;
-    background-color: #000;
+    background-color: $black-deep;
     visibility: hidden;
     transform: scaleX(0);
     the-transition();
   }
+
+  &:hover { color: $black-deep; }
 
   &:hover::before {
     visibility: visible;
