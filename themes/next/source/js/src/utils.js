@@ -33,6 +33,19 @@ NexT.utils = NexT.$u = {
     });
   },
 
+  playMusic: function () {
+    $('.header .bgm').on('click', function () {
+      if($(this).hasClass('playing')) {
+        $(this).removeClass('playing');
+        $('audio')[0].pause();
+      } else {
+        $(this).addClass('playing');
+        $('audio')[0].play();
+      }
+
+    });
+  },
+
   lazyLoadPostsImages: function () {
     $('#posts').find('img').lazyload({
       placeholder: '/images/loading.gif',
@@ -205,3 +218,4 @@ NexT.utils = NexT.$u = {
     return this.isPisces();
   }
 };
+

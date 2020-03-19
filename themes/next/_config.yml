@@ -2,6 +2,11 @@
 # Site Information Settings
 # ---------------------------------------------------------------
 
+#bgm
+bgm:
+  path: /毛不易-借.mp3
+  name: 毛不易-借
+
 # Put your favicon.ico into `hexo-site/source/` directory.
 favicon: /favicon.ico
 

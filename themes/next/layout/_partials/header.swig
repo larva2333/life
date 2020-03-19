@@ -14,6 +14,10 @@
       <span class="site-title">{{ config.title }}</span>
       <span class="logo-line-after"><i></i></span>
     </a>
+    <span title="{{ theme.bgm.name }}" class="bgm"><i class="fa fa-music"></i></span>
+    <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="false">
+        <source type="audio/mpeg" src="{{ theme.bgm.path }}">
+    </audio>
   </div>
     {% if theme.seo %}
       <h1 class="site-subtitle" itemprop="description">{{ config.subtitle }}</h1>
