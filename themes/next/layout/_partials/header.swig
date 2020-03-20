@@ -16,7 +16,7 @@
     </a>
     <span title="{{ theme.bgm.name }}" class="bgm"><i class="fa fa-music"></i></span>
     <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="false">
-        <source type="audio/mpeg" src="{{ theme.bgm.path }}">
+        <source type="audio/mpeg" src="{{ theme.bgm.src }}">
     </audio>
   </div>
     {% if theme.seo %}
