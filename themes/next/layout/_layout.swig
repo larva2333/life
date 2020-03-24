@@ -20,10 +20,7 @@
   {% if theme.sidebar.position %}
     {% set container_class = container_class + 'sidebar-position-' + theme.sidebar.position %}
   {% endif %}
-  <div id="wechat" style="display:none">
-    <img id="wechat" src="/images/smalltx.jpeg" alt="fmyblack" />
-  </div>
-  
+
   <div class="{{ container_class }} {% block page_class %}{% endblock %} ">
     <div class="headband"></div>
 
@@ -50,6 +47,7 @@
       <div class="footer-inner">
         {% include '_partials/footer.swig' %}
         {% include '_scripts/third-party/analytics/busuanzi-counter.swig' %}
+        {% include '_scripts/third-party/analytics/total-counter.swig' %}
         {% block footer %}{% endblock %}
       </div>
     </footer>
