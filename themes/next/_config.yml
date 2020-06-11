@@ -4,8 +4,8 @@
 
 #bgm
 bgm:
-  src: /毛不易 - 借.mp3
-  name: 毛不易 - 借
+  src: /薛之谦 - 陪你去流浪.mp3
+  name: 薛之谦 - 陪你去流浪
 
 # Put your favicon.ico into `hexo-site/source/` directory.
 favicon: /favicon.ico

@@ -1,14 +1,23 @@
-# NexT-wclw
+# NexT-life.larva.fun
 
 > 精于心，简于形
 
-<a href="http://fmyblack.com" target="_blank">在线预览 Preview</a>
-
+<a href="https://life.larva.fun" target="_blank">在线预览 Preview</a>
 
 
 所有改动基于next
 
 
+## 为文件增加天气
+<a href="https://fontawesome.com/icons?d=gallery&c=weather" target="_blank">font awesome 图标</a>
+
+```
+具体参考：https://fontawesome.com/icons?d=gallery&c=weather
+<i class="fas fa-user"></i> <!-- uses solid style -->
+<i class="far fa-user"></i> <!-- uses regular style -->
+<i class="fal fa-user"></i> <!-- uses light style -->
+<i class="fab fa-github-square"></i> <!-- uses brands style -->
+```
 
 ## 为文件增加地点
 

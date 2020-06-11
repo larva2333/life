@@ -63,7 +63,7 @@
           <span class="post-time">
             {% if theme.post_meta.created_at %}
               <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
+                <i class="fa fa-calendar-edit"></i>
               </span>
               <time itemprop="dateCreated datePublished" datetime="{{ moment(post.date).format() }}">
                 {{ date(post.date, config.date_format) }}
@@ -74,6 +74,11 @@
                 {% endif %}
                 {{post.location}}
               {% endif %}
+              {% if post.weather and post.weather.length %}
+                <span class="post-meta-item-icon">
+                  <i class="{{post.weather}}"></i>
+                </span>
+              {% endif %}
             {% endif %}
 
             {% if theme.post_meta.created_at and theme.post_meta.updated_at %}
@@ -82,7 +87,7 @@
 
             {% if theme.post_meta.updated_at %}
               <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-check-o"></i>
+                <i class="fa fa-calendar-check"></i>
               </span>
               {% if theme.post_meta.item_text %}
                 <span class="post-meta-item-text">{{ __('post.modified') }}</span>
@@ -99,7 +104,7 @@
               <span class="post-meta-divider">|</span>
             {% endif %}
               <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
+                <i class="fa fa-folder"></i>
               </span>
               {% if theme.post_meta.item_text %}
                 <span class="post-meta-item-text">{{ __('post.in') }}</span>
