@@ -4,8 +4,8 @@
 
 #bgm
 bgm:
-  src: /薛之谦 - 陪你去流浪.mp3
-  name: 薛之谦 - 陪你去流浪
+  src: /周杰伦 - Mojito.mp3
+  name: 周杰伦 - Mojito
 
 # Put your favicon.ico into `hexo-site/source/` directory.
 favicon: /favicon.ico
