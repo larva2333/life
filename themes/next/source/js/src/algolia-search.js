@@ -46,7 +46,7 @@ $(document).ready(function () {
         empty: function (data) {
           return (
             '<div id="algolia-hits-empty">' +
-              algoliaSettings.labels.hits_empty.replace(/\$\{query}/, data.query) +
+              algoliaSettings.labels.hits_empty.replace(/\${query}/, data.query) +
             '</div>'
           );
         }
@@ -61,8 +61,8 @@ $(document).ready(function () {
       templates: {
         body: function (data) {
           var stats = algoliaSettings.labels.hits_stats
-                        .replace(/\$\{hits}/, data.nbHits)
-                        .replace(/\$\{time}/, data.processingTimeMS);
+                        .replace(/\${hits}/, data.nbHits)
+                        .replace(/\${time}/, data.processingTimeMS);
           return (
             stats +
             '<span class="algolia-powered">' +
@@ -79,10 +79,10 @@ $(document).ready(function () {
       scrollTo: false,
       showFirstLast: false,
       labels: {
-        first: '<i class="fa fa-angle-double-left"></i>',
-        last: '<i class="fa fa-angle-double-right"></i>',
-        previous: '<i class="fa fa-angle-left"></i>',
-        next: '<i class="fa fa-angle-right"></i>'
+        first: '<i class="fas fa-angle-double-left"></i>',
+        last: '<i class="fas fa-angle-double-right"></i>',
+        previous: '<i class="fas fa-angle-left"></i>',
+        next: '<i class="fas fa-angle-right"></i>'
       },
       cssClasses: {
         root: 'pagination',
