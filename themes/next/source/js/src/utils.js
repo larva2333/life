@@ -34,15 +34,61 @@ NexT.utils = NexT.$u = {
   },
 
   playMusic: function () {
+    // 默认音量为30%
+    let audio = $('audio')[0];
+    let volume = localStorage.getItem("volume");
+    volume = volume ? parseInt(volume) : 30;
+    localStorage.setItem("volume", volume);
+    audio.volume = volume/100;
+
     $('.header .bgm').on('click', function () {
       if($(this).hasClass('playing')) {
         $(this).removeClass('playing');
-        $('audio')[0].pause();
+        let title = $(this).attr('title');
+        $(this).attr('title', title.split('（')[0]);
+        audio.pause();
       } else {
         $(this).addClass('playing');
-        $('audio')[0].play();
+        let title = $(this).attr('title');
+        $(this).attr('title', title + '（当前音量：' + volume + '%，ALT + ↑ ↓ 可以控制音量）');
+        audio.play();
       }
+    });
 
+    $('body').keyup(function(event){
+      let keyCode = event.keyCode || event.which || event.charCode;
+      let altKey = event.altKey;
+      event.preventDefault();
+
+      // 回车暂停或播放
+      if(keyCode === 13){
+        $('.bgm').click();
+        return false;
+      }
+      // ALT + ↑ 增加音量
+      if(altKey && keyCode === 38){
+        let volume = parseInt(localStorage.getItem("volume"));
+        if (volume < 100) {
+          volume = volume + 10;
+          audio.volume = volume/100;
+          localStorage.setItem("volume", volume);
+          let title = $('.bgm').attr('title');
+          $('.bgm').attr('title', title.replace(/\d+/g, volume));
+        }
+        return false;
+      }
+      // ALT + ↓ 减少音量
+      if(altKey && keyCode === 40){
+        let volume = parseInt(localStorage.getItem("volume"));
+        if (volume > 0) {
+          volume = volume - 10;
+          audio.volume = volume/100;
+          localStorage.setItem("volume", volume);
+          let title = $('.bgm').attr('title');
+          $('.bgm').attr('title', title.replace(/\d+/g, volume));
+        }
+        return false;
+      }
     });
   },
 

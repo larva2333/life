@@ -4,8 +4,8 @@
 
 #bgm
 bgm:
-  src: /薛之谦 - 不爱我.mp3
-  name: 薛之谦 - 不爱我
+  src: /life/关键词 - 林俊杰.mp3
+  name: 关键词 - 林俊杰
 
 # Put your favicon.ico into `hexo-site/source/` directory.
 favicon: /favicon.ico
