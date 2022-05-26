@@ -4,7 +4,7 @@
 
 #bgm
 bgm:
-  src: /life/关键词 - 林俊杰.mp3
+  src: https://pro-1304765961.cos.ap-beijing.myqcloud.com/public/user/document/2022/4/21/%E5%85%B3%E9%94%AE%E8%AF%8D%20-%20%E6%9E%97%E4%BF%8A%E6%9D%B0.mp3
   name: 关键词 - 林俊杰
 
 # Put your favicon.ico into `hexo-site/source/` directory.
@@ -91,8 +91,8 @@ scheme: Mist
 font:
   enable: true
 
-  # Uri of fonts host. E.g. //fonts.googleapis.com (Default)
-  host:
+  # Uri of fonts host. E.g. //fonts.loli.net (Default)
+  host: //fonts.loli.net
 
   # Global font settings used on <body> element.
   global:
