@@ -4,8 +4,12 @@
 
 #bgm
 bgm:
-  src: https://pro-1304765961.cos.ap-beijing.myqcloud.com/public/user/document/2022/4/21/%E5%85%B3%E9%94%AE%E8%AF%8D%20-%20%E6%9E%97%E4%BF%8A%E6%9D%B0.mp3
-  name: 关键词 - 林俊杰
+  src: https://pro-1304765961.cos.ap-beijing.myqcloud.com/public/user/document/2022/4/21/%E9%99%88%E5%A5%95%E8%BF%85%20-%20%E5%B9%B8%E7%A6%8F%E6%91%A9%E5%A4%A9%E8%BD%AE.mp3
+  name: 幸福摩天轮 - 陈奕迅
+#  src: https://pro-1304765961.cos.ap-beijing.myqcloud.com/public/user/document/2022/4/21/%E9%99%88%E5%A5%95%E8%BF%85%20-%20%E6%97%A0%E6%9D%A1%E4%BB%B6.mp3
+#  name: 无条件 - 陈奕迅
+#  src: https://pro-1304765961.cos.ap-beijing.myqcloud.com/public/user/document/2022/4/21/%E5%85%B3%E9%94%AE%E8%AF%8D%20-%20%E6%9E%97%E4%BF%8A%E6%9D%B0.mp3
+#  name: 关键词 - 林俊杰
 
 # Put your favicon.ico into `hexo-site/source/` directory.
 favicon: /favicon.ico
