@@ -37,11 +37,12 @@ NexT.utils = NexT.$u = {
     // 默认音量为30%
     let audio = $('audio')[0];
     let volume = localStorage.getItem("volume");
+    let bgm = $('.header .bgm');
     volume = volume ? parseInt(volume) : 30;
     localStorage.setItem("volume", volume);
     audio.volume = volume/100;
 
-    $('.header .bgm').on('click', function () {
+    bgm.on('click', function () {
       if($(this).hasClass('playing')) {
         $(this).removeClass('playing');
         let title = $(this).attr('title');
@@ -49,47 +50,54 @@ NexT.utils = NexT.$u = {
         audio.pause();
       } else {
         $(this).addClass('playing');
-        let title = $(this).attr('title');
-        $(this).attr('title', title + '（当前音量：' + volume + '%，ALT + ↑ ↓ 可以控制音量）');
         audio.play();
       }
     });
 
     $('body').keyup(function(event){
       let keyCode = event.keyCode || event.which || event.charCode;
-      let altKey = event.altKey;
       event.preventDefault();
 
       // 回车暂停或播放
       if(keyCode === 13){
-        $('.bgm').click();
+        if (bgm.hasClass('playing')) {
+          toast("暂停播放");
+        } else {
+          toast("继续播放");
+        }
+        bgm.click();
         return false;
       }
-      // ALT + ↑ 增加音量
-      if(altKey && keyCode === 38){
+      // U 增加音量
+      if(keyCode === 85){
         let volume = parseInt(localStorage.getItem("volume"));
         if (volume < 100) {
           volume = volume + 10;
           audio.volume = volume/100;
           localStorage.setItem("volume", volume);
-          let title = $('.bgm').attr('title');
-          $('.bgm').attr('title', title.replace(/\d+/g, volume));
         }
+        toast("当前音量：" + volume + "%");
         return false;
       }
-      // ALT + ↓ 减少音量
-      if(altKey && keyCode === 40){
+      // L 减少音量
+      if(keyCode === 76){
         let volume = parseInt(localStorage.getItem("volume"));
         if (volume > 0) {
           volume = volume - 10;
           audio.volume = volume/100;
           localStorage.setItem("volume", volume);
-          let title = $('.bgm').attr('title');
-          $('.bgm').attr('title', title.replace(/\d+/g, volume));
         }
+        toast("当前音量：" + volume + "%");
         return false;
       }
     });
+
+    function toast (tip){
+      $(".mess").remove();
+      var str='<div style="position: fixed;width: 150px;height: 40px;line-height: 40px; text-align: center;margin-left: -75px;left: 50%;top: 23%;border-radius:10px;background:#666;opacity: 0.8;color: white" class="mess"><span></span></div>';
+      $("body").append(str);
+      $(".mess").html(tip).fadeIn().delay(1000).fadeOut();
+    }
   },
 
   lazyLoadPostsImages: function () {
