@@ -104,3 +104,6 @@ deploy:
   - type: git
     repo: git@gitee.com:larva233/life.git
     branch: release
+  - type: git
+    repo: git@github.com:larva2333/life.git
+    branch: release
